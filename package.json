@@ -5,10 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
-    "test:staged": "jest"
+    "test:staged": "jest",
+    "prepare": "husky install"
   },
   "standard": {
-    "env": ["jest"]
+    "env": [
+      "jest"
+    ]
   },
   "keywords": [],
   "author": "zeneto",

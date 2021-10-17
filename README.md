@@ -8,3 +8,6 @@ API em node, usando clean architecture
 - **Lint-staged:** allow us to run scripts on files that are on the git staged area before they are added to the commit;
 - **Husky:** allow us add hooks for our git;
 - **Jest:** framework for test our application
+
+
+## Unit Test

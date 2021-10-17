@@ -1,20 +1,21 @@
 {
   "name": "clean-api",
   "version": "1.0.0",
-  "description": "API em node, usando clean architecture",
+  "description": "Node API, with a clean architecture",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ze-nto/clean-node-api.git"
+  "standard": {
+    "env": ["jest"]
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ze-nto/clean-node-api/issues"
-  },
-  "homepage": "https://github.com/ze-nto/clean-node-api#readme"
+  "author": "zeneto",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^7.0.2",
+    "jest": "^27.2.5",
+    "lint-staged": "^11.2.3",
+    "standard": "^16.0.4"
+  }
 }

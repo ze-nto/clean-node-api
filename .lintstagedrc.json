@@ -1,7 +1,7 @@
 {
     
     "*.js": [
-        "standard --fix  --env jest",
+        "standard --fix",
         "npm run test:staged"
     ]
     

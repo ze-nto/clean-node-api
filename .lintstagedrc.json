@@ -1,13 +1,8 @@
 {
-    "lint-staged": {
-
-        "*.js": [
-            "standard --fix",
-            "npm run test:staged"
-        ],
-        "env" : {
-            "jest": true,
-            "node": true
-        }
-    }
+    
+    "*.js": [
+        "standard --fix  --env jest",
+        "npm run test:staged"
+    ]
+    
 }

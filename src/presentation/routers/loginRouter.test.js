@@ -1,3 +1,5 @@
+/* eslint-env jest */
+
 const LoginRouter = require('./LoginRouter')
 const MissingParamError = require('../helpers/MissingParamError')
 const UnauthorizedError = require('../helpers/UnauthorizedError')

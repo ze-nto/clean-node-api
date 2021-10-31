@@ -1,6 +1,5 @@
 /* eslint-env jest */
-const { MissingParamError, InvalidParamError } = require('../../utils/errors')
-
+const { MissingParamError } = require('../../utils/errors')
 const AuthUseCase = require('./AuthUseCase')
 
 const makeSut = () => {
@@ -27,7 +26,7 @@ describe('AuthUseCase', () => {
   it('Should throw if no password is provided', async () => {
     const { sut } = makeSut()
     const promise = sut.auth('any_email@email.com')
-    expect(promise).rejects.toThrow(new MissingParamError('password'))
+    expect(promise).rejects.toThrow()
   })
 
   it('Should call LoadUserByEmailRepository with correct email', async () => {
@@ -39,13 +38,13 @@ describe('AuthUseCase', () => {
   it('Should throw if no LoadUserByEmailRepository is provided', async () => {
     const sut = new AuthUseCase()
     const promise = sut.auth('any_email@email.com', 'any_password')
-    expect(promise).rejects.toThrow(new MissingParamError('loadUserByEmailRepository'))
+    expect(promise).rejects.toThrow()
   })
 
   it('Should throw if LoadUserByEmailRepository has no load method', async () => {
     const sut = new AuthUseCase({})
     const promise = sut.auth('any_email@email.com', 'any_password')
-    expect(promise).rejects.toThrow(new InvalidParamError('loadUserByEmailRepository'))
+    expect(promise).rejects.toThrow()
   })
 
   it('Should reurn null if LoadUserByEmailRepository returns null', async () => {
